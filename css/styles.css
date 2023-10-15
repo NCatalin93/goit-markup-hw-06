@@ -494,10 +494,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.global-footer-adress {
-  margin-right: 70px;
+  gap: 30px;
 }
 
 .global-footer .container .full-adress {
@@ -555,35 +552,9 @@ img {
   text-decoration: none;
   width: 231px;
 }
+
 .global-footer {
   background-color: var(--fill-color);
-}
-
-.global-footer-form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.textfield {
-  width: 60%;
-}
-
-.form-submit {
-  display: flex;
-  width: 35%;
-}
-
-.form-submit svg {
-  width: 20px;
-  height: 20px;
 }
 
 /* Logo sub-section */
@@ -623,6 +594,99 @@ img {
 .global-footer .full-adress a:hover,
 .global-footer .full-adress a:focus {
   color: var(--highlighting-color);
+}
+
+/* Form styles */
+
+.global-footer-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-weight: var(--titles-font-weight);
+  line-height: var(--common-line-height);
+  color: var(--white-color);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.textfield,
+.form-submit {
+  border-radius: 4px;
+  height: 50px;
+}
+
+.textfield {
+  width: 63%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  padding: 15px 16px;
+  color: var(--white-color);
+  background-color: var(--fill-color);
+  box-shadow: none;
+  transition: border var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.textfield:focus {
+  border: 1px solid var(--highlighting-color);
+  background: linear-gradient(
+      0deg,
+      rgba(33, 150, 243, 0),
+      rgba(33, 150, 243, 0)
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.textfield::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-submit {
+  display: flex;
+  width: 35%;
+  background-color: var(--highlighting-color);
+  position: relative;
+  cursor: pointer;
+  padding: 10px 43px;
+}
+
+.form-submit .subscribe-button {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.875;
+  font-weight: var(--titles-font-weight);
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--white-color);
+  cursor: pointer;
+  padding: 0;
+}
+
+.form-submit svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--white-color);
+  position: absolute;
+  top: 13px;
+  right: 28px;
 }
 
 /* Portfolio page */
