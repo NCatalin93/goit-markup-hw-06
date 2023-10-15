@@ -376,6 +376,27 @@
             </a>
           </div>
         </div>
+        <form class="global-footer-form" autocomplete="on">
+          <label class="form-label" for="email"
+            >Subscribe to the newsletter</label
+          >
+          <div class="input-container">
+            <input
+              class="textfield"
+              type="text"
+              name="email"
+              id="email"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              required
+            />
+            <div class="form-submit">
+              <input class="subscribe-button" type="submit" value="Subscribe" />
+              <svg>
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </div>
+          </div>
+        </form>
       </div>
     </footer>
     <!-- Modal window section -->
