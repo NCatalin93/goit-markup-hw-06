@@ -605,27 +605,27 @@ img {
   gap: 20px;
 }
 
-.form-label {
+.global-footer-form .form-label {
   text-transform: uppercase;
   font-weight: var(--titles-font-weight);
   line-height: var(--common-line-height);
   color: var(--white-color);
 }
 
-.input-container {
+.global-footer-form .footer-input-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 12px;
 }
 
-.textfield,
-.form-submit {
+.global-footer-form .textfield,
+.global-footer-form .form-submit {
   border-radius: 4px;
   height: 50px;
 }
 
-.textfield {
+.global-footer-form .textfield {
   width: 63%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   outline: none;
@@ -637,7 +637,7 @@ img {
     box-shadow var(--transition);
 }
 
-.textfield:focus {
+.global-footer-form .textfield:focus {
   border: 1px solid var(--highlighting-color);
   background: linear-gradient(
       0deg,
@@ -652,7 +652,7 @@ input:focus::placeholder {
   color: transparent;
 }
 
-.textfield::placeholder {
+.global-footer-form .textfield::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(117, 117, 117, 0.5);
@@ -665,6 +665,8 @@ input:focus::placeholder {
   position: relative;
   cursor: pointer;
   padding: 10px 43px;
+  transition: box-shadow var(--transition);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .form-submit .subscribe-button {
@@ -830,8 +832,8 @@ input:focus::placeholder {
   position: relative;
   background-color: var(--white-color);
   padding: 8px;
-  width: 33%;
-  height: 55%;
+  width: 528px;
+  height: 581px;
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
@@ -849,6 +851,11 @@ input:focus::placeholder {
   right: 0;
   margin: 8px;
   cursor: pointer;
+  transition: fill var(--transition);
+}
+
+.close-modal-background:hover {
+  fill: var(--highlighting-color);
 }
 
 .close-modal-icon {
@@ -858,4 +865,112 @@ input:focus::placeholder {
   top: 0;
   right: 0;
   margin: 8px;
+}
+
+/* Modal form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.contact-form p {
+  font-size: 20px;
+  line-height: 1.172;
+  text-align: center;
+  font-weight: var(--titles-font-weight);
+  color: var(--brand-text-color);
+  padding-bottom: 12px;
+  letter-spacing: 0.03em;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  font-size: 12px;
+  line-height: 1.1716;
+  letter-spacing: 0.01em;
+  color: var(--backup-text-color);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.input-container svg {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: calc(50% - 9px);
+  left: 12px;
+}
+
+.textfield {
+  height: 40px;
+  padding: 11px 12px 11px 42px;
+}
+
+textarea {
+  height: 120px;
+  padding: 12px 16px;
+}
+
+textarea::placeholder {
+  font-family: var(--text-font-family);
+  font-size: 12px;
+  line-height: 1.1716;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+.textfield,
+textarea {
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: border var(--transition) fill var(--transition);
+}
+
+.textfield:focus,
+textarea:focus {
+  border: 1px solid var(--highlighting-color);
+}
+
+.textfield:focus + svg {
+  fill: var(--highlighting-color);
+}
+
+.modal-submit {
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--highlighting-color);
+  color: var(--white-color);
+  font-weight: var(--titles-font-weight);
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  text-align: center;
+  transition: box-shadow var(--transition);
+}
+
+.modal-submit:hover,
+.modal-submit:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
