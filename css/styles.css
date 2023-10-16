@@ -648,7 +648,7 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-input:focus::placeholder {
+.textfield:focus::placeholder {
   color: transparent;
 }
 
@@ -897,14 +897,14 @@ input:focus::placeholder {
   color: var(--backup-text-color);
 }
 
-.input-container {
+.contact-details .input-container {
   display: flex;
   flex-direction: column;
   gap: 4px;
   position: relative;
 }
 
-.input-container svg {
+.contact-details .input-container svg {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -920,6 +920,7 @@ input:focus::placeholder {
 textarea {
   height: 120px;
   padding: 12px 16px;
+  resize: none;
 }
 
 textarea::placeholder {
@@ -968,9 +969,53 @@ textarea:focus {
   letter-spacing: 0.06em;
   text-align: center;
   transition: box-shadow var(--transition);
+  cursor: pointer;
 }
 
 .modal-submit:hover,
 .modal-submit:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.terms-and-conditions-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.terms-and-conditions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.terms-text {
+  color: var(--backup-text-color);
+  line-height: 1.71428;
+  letter-spacing: 0.03em;
+}
+
+.terms-text a {
+  color: var(--highlighting-color);
+}
+
+.terms-and-conditions-label svg {
+  width: 13.5px;
+  height: 13.5px;
+  position: absolute;
+  top: calc(50% - 6.5px);
+  left: calc(0% + 17.5px);
+  fill: var(--white-color);
+  background: var(--highlighting-color);
+  border-radius: 2px;
+}
+
+.terms-and-conditions-check:not(:checked) + label > svg {
+  visibility: hidden;
 }

@@ -385,7 +385,7 @@
               class="textfield"
               type="text"
               name="email"
-              id="email"
+              id="email-footer"
               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               required
               placeholder="E-mail"
@@ -413,7 +413,7 @@
             <use href="./images/icons.svg#icon-modal-close-button"></use>
           </svg>
         </div>
-        <form action="" autocomplete="off" class="contact-form">
+        <form action="#" autocomplete="off" class="contact-form">
           <p>Leave your information and we'll call you back</p>
           <div class="contact-details">
             <div class="input-container">
@@ -472,7 +472,35 @@
               <textarea placeholder="Enter the text"></textarea>
             </div>
           </div>
-          <input class="modal-submit" type="submit" value="Send" />
+          <div class="input-container terms-and-conditions-container">
+            <input
+              type="checkbox"
+              class="terms-and-conditions-check"
+              name="terms-and-conditions-check"
+              id="terms-and-conditions-check"
+              value="checked"
+              required
+              title="Please read and then agree with terms and conditions in oreder to proceed"
+            />
+            <label
+              for="terms-and-conditions-check"
+              class="terms-and-conditions-label"
+            >
+              <svg class="icon-checkbox">
+                <use href="./images/icons.svg#icon-check-form" />
+              </svg>
+              <span class="terms-text">
+                I agree with the letter and accept the
+                <a href="#">Terms and Conditions</a>
+              </span>
+            </label>
+          </div>
+          <input
+            class="modal-submit"
+            type="submit"
+            name="submit"
+            value="Send"
+          />
         </form>
       </div>
     </div>
