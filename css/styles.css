@@ -603,6 +603,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 15px;
 }
 
 .global-footer-form .form-label {
@@ -615,7 +616,6 @@ img {
 .global-footer-form .footer-input-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   gap: 12px;
 }
 
@@ -626,7 +626,7 @@ img {
 }
 
 .global-footer-form .textfield {
-  width: 63%;
+  max-width: 65%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   outline: none;
   padding: 15px 16px;
@@ -635,6 +635,7 @@ img {
   box-shadow: none;
   transition: border var(--transition), background-color var(--transition),
     box-shadow var(--transition);
+  flex-grow: 1;
 }
 
 .global-footer-form .textfield:focus {
@@ -947,11 +948,14 @@ textarea {
 }
 
 .textfield:focus,
-textarea:focus {
+.textfield:hover,
+textarea:focus,
+textarea:hover {
   border: 1px solid var(--highlighting-color);
 }
 
-.textfield:focus + svg {
+.textfield:focus + svg,
+.textfield:hover + svg {
   fill: var(--highlighting-color);
 }
 
